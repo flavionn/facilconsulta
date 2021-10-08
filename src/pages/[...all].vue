@@ -1,8 +1,12 @@
 <template lang="pug">
 
-div(class="bg-red-500 h-screen w-full flex flex-col space-y-2 items-center justify-center text-3xl text-white")
+div(class="h-screen w-full flex flex-col space-y-2 items-center justify-center text-center text-4xl")
 	div Página não encontrada
-	router-link(to="/") Voltar para o início
+
+	router-link(
+		to="/"
+		class="border-b border-gray-300 hover:(border-gray-500)"
+		) Voltar para o início
 
 </template>
 

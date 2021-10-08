@@ -72,7 +72,7 @@ form(@submit.prevent="processaForm")
 			)
 	ui-barra-progresso(passo="1")
 	ui-botao-cadastro(
-		class="bg-blue-500 text-white"
+		class="bg-hex-483698 text-white"
 		) Próximo
 
 </template>

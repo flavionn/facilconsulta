@@ -33,7 +33,7 @@ router-link(
 a
 	@apply border
 	@apply rounded-xl
-	@apply px-6
+	@apply px-4
 	@apply py-4
 
 </style>

@@ -31,6 +31,7 @@ p
 		@blur="validarInput"
 		@input="$emit('update:modelValue', $event.target.value)"
 		:class="{ '!border-red-400' : erros.celular }"
+		v-maska="'(##) # ####-####'"
 		)
 	mensagem-erro(v-if="erros.celular") {{ erros.celular }}
 

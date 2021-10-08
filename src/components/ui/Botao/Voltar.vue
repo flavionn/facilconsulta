@@ -1,6 +1,6 @@
 <script setup>
 
-import IconeVoltar from '~icons/iconoir/nav-arrow-left'
+import IconeVoltar from '~icons/iconoir/arrow-left'
 
 </script>
 

@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@iconify/json': ^1.1.412
   '@vitejs/plugin-vue': ^1.9.3
+  maska: ^1.4.6
   pug: ^3.0.2
   sass: ^1.42.1
   unplugin-icons: ^0.12.12
@@ -16,6 +17,7 @@ specifiers:
   vuex: ^4.0.2
 
 dependencies:
+  maska: 1.4.6
   vue: 3.2.19
   vue-router: 4.0.11_vue@3.2.19
   vuex: 4.0.2_vue@3.2.19
@@ -1081,6 +1083,10 @@ packages:
     resolution: {integrity: sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==}
     dependencies:
       sourcemap-codec: 1.4.8
+
+  /maska/1.4.6:
+    resolution: {integrity: sha512-dEZcoGp5Wufm2PZ4qZD81WKNaWO6XBIiHLazt5xShl4lydlH/5ZoLGEyJfzBaREXbAnsE5THShLyJKIaIeIuvA==}
+    dev: false
 
   /merge-stream/2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}

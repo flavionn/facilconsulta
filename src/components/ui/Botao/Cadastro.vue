@@ -17,7 +17,7 @@ const href = () => {
 <template lang="pug">
 
 button(
-	class="disabled:(opacity-50 cursor-not-allowed)"
+	class="disabled:(opacity-50 cursor-not-allowed) cursive"
 	@click="href"
 	)
 	slot
