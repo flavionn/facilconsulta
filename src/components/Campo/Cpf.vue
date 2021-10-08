@@ -31,7 +31,6 @@ p
 		@blur="validarInput"
 		@input="$emit('update:modelValue', $event.target.value)"
 		:class="{ '!border-red-400' : erros.cpf }"
-		v-maska="'###.###.###-##'"
 		)
 	mensagem-erro(v-if="erros.cpf") {{ erros.cpf }}
 

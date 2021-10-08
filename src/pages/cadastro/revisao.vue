@@ -15,33 +15,52 @@ const atendimento = ref(dados.value.atendimento)
 
 <template lang="pug">
 
-div
+div(class="space-y-12")
 
-	div
-		IconeProfissional(class="text-2xl")
-		div Profissional
-		div
-			div {{ profissional.nome }}
-			div {{ profissional.cpf }}
-			div {{ profissional.celular }}
-			div {{ profissional.estado }}
-			div {{ profissional.cidade }}
+	revisao-container
+		revisao-icone
+			icone-profissional
+		revisao-info-container
+			revisao-subtitulo Profissional
+			revisao-info-campo-container
+			revisao-info-campo-container
+				div
+					revisao-titulo-campo Nome
+					revisao-texto-campo {{ profissional.nome }}
+				div
+					revisao-titulo-campo CPF
+					revisao-texto-campo {{ profissional.cpf }}
+				div
+					revisao-titulo-campo Celular
+					revisao-texto-campo {{ profissional.celular }}
+				div
+					revisao-titulo-campo Estado
+					revisao-texto-campo {{ profissional.estado }}
+				div
+					revisao-titulo-campo Cidade
+					revisao-texto-campo {{ profissional.cidade }}
 
-	div
-		IconeAtendimento(class="text-2xl")
-		div Atendimento
-		div
-			div {{ atendimento.especialidade }}
-			div {{ atendimento.preco }}
-			div {{ atendimento.forma }}
-			div {{ atendimento.parcelamento }}
+	hr
 
-	//- div(v-for="(conteudo, categoria) in dados")
-		h1 {{ categoria }}
-
-		div(v-for="(item, nome) in conteudo")
-			h2 {{ nome }}
-			h3 {{ item }}
+	revisao-container
+		revisao-icone
+			icone-atendimento
+		revisao-info-container
+			revisao-subtitulo Atendimento
+			revisao-info-campo-container
+				div
+					revisao-titulo-campo Especialidade
+					revisao-texto-campo {{ atendimento.especialidade }}
+				div
+					revisao-titulo-campo Valor consulta
+					revisao-texto-campo {{ atendimento.preco }}
+				div
+					revisao-titulo-campo Formas de pagamento
+					div(v-for="item in atendimento.forma") 
+						revisao-texto-campo {{ item }}
+				div
+					revisao-titulo-campo Parcelamento possível
+					revisao-texto-campo Em até {{ atendimento.parcelamento }}x
 
 	div(class="space-y-2")
 		ui-botao-cadastro(
