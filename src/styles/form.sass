@@ -1,0 +1,39 @@
+form
+	@apply space-y-8
+
+	p
+		@apply space-y-2
+
+	span
+		@apply block
+		@apply space-x-2
+
+	input[type=text],
+	input[type=number],
+	input[type=email],
+	select,
+	textarea
+		@apply border
+		@apply border-gray-200
+		@apply outline-none
+		@apply px-4
+		@apply py-3
+		@apply rounded-md
+		@apply text-md
+		@apply w-full
+		@apply h-12
+		@apply focus:border-gray-400
+
+	select
+		@apply bg-white
+
+button
+	@apply rounded-full
+	@apply px-6
+	@apply py-4
+	@apply block
+	@apply text-center
+	@apply uppercase
+	@apply font-semibold
+	@apply w-full
+	@apply focus:outline-none
