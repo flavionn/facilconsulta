@@ -13,21 +13,20 @@ pnpm dev # rode este comando e acesse - http://localhost:3000
 ```
 
 ## Stack
-mais no [package.json](.package.json)
+mais no package.json
 - pnpm
 - Vite 2
-- Vue 2
+- Vue 3 (Composition API)
 - Windi CSS
 - Sass
 - Pug
-- Vue Formulate
 
 ## Tasks
 - [x] instalar dependências necessárias
 - [x] organizar pastas iniciais projeto
-- [ ] markup form
-- [ ] validação form
-- [ ] funcionamento do formulário
-- [ ] salvar dados
-- [ ] componentização
-- [ ] estilo
+- [x] markup form
+- [x] validação form
+- [x] funcionamento do formulário
+- [x] salvar dados
+- [x] componentização
+- [x] estilo
