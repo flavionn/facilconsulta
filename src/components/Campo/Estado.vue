@@ -1,16 +1,15 @@
 <script setup>
 
 import { ref } from 'vue'
-import { useStore } from 'vuex'
 import useValidacaoForm from '@/modules/ValidacaoForm'
 import useLocalizacao from '@/modules/Localizacao'
 
-let input = ref('')
+let input = ref(props.valor)
 let estados = ref('')
 
+const props = defineProps({ valor: String })
 const emit = defineEmits(['uf', 'update:modelValue'])
 
-const store = useStore()
 const { validarEstado, erros } = useValidacaoForm()
 const { listaEstados } = useLocalizacao()
 
@@ -25,8 +24,6 @@ const validarInput = () => {
 }
 
 estados.value = listaEstados
-store.state.form.profissional.estado ? input.value = store.state.form.profissional.estado : ''
-
 emitir()
 
 </script>
@@ -34,7 +31,7 @@ emitir()
 <template lang="pug">
 
 p
-	label(for="estado") Estado
+	label(for="estado") Estado *
 	select(
 		id="estado"
 		v-model="input"

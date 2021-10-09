@@ -1,22 +1,17 @@
 <script setup>
 
 import { ref } from 'vue'
-import { useStore } from 'vuex'
 import useValidacaoForm from '@/modules/ValidacaoForm'
 import useLocalizacao from '@/modules/Localizacao'
 
 let input = ref('')
 let cidades = ref('')
 
+const props = defineProps({ valor: String, estado: String })
 const emit = defineEmits(['update:modelValue'])
 
-const store = useStore()
 const { validarCidade, erros } = useValidacaoForm()
 const { pesquisaCidades } = useLocalizacao()
-
-const props = defineProps({
-	estado: String
-})
 
 const validarInput = () => {
 	emit('update:modelValue', input.value)
@@ -25,19 +20,17 @@ const validarInput = () => {
 
 props.estado && props.estado.length ? cidades.value = pesquisaCidades(props.estado) : ''
 
-if(cidades.value.includes(store.state.form.profissional.cidade)) {
-	input.value = store.state.form.profissional.cidade
+if(cidades.value.includes(props.valor)) {
+	input.value = props.valor
 	validarCidade('cidade', input.value)
 }
-
-emit('update:modelValue', input.value)
 
 </script>
 
 <template lang="pug">
 
 p
-	label(for="cidade") Cidade
+	label(for="cidade") Cidade *
 	select(
 		id="cidade"
 		v-model="input"

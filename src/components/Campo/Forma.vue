@@ -1,16 +1,15 @@
 <script setup>
 
 import { ref } from 'vue'
-import { useStore } from 'vuex'
 import useValidacaoForm from '@/modules/ValidacaoForm'
 import useFormasPagamento from '@/modules/FormasPagamento'
 
-let input = ref([])
+let input = ref(props.valor)
 let formasPagamento = ref([])
 
+const props = defineProps({ valor: Array })
 const emit = defineEmits(['forma', 'update:modelValue'])
 
-const store = useStore()
 const { validarFormaPagamento, erros } = useValidacaoForm()
 const { listaFormasPagamento } = useFormasPagamento()
 
@@ -25,17 +24,13 @@ const validarInput = () => {
 }
 
 formasPagamento.value = listaFormasPagamento
-store.state.form.atendimento.forma ? input.value = store.state.form.atendimento.forma : ''
-
-emitir()
 
 </script>
 
 <template lang="pug">
 
 p
-	label Formas de pagamento da consulta
-
+	label Formas de pagamento da consulta *
 	template(v-for="item in formasPagamento")
 		span
 			input(

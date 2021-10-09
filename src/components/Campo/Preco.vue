@@ -1,27 +1,20 @@
 <script setup>
 
 import { ref } from 'vue'
-import { useStore } from 'vuex'
 import useValidacaoForm from '@/modules/ValidacaoForm'
 
-let input = ref('')
+let input = ref(props.valor)
+const props = defineProps({ valor: String })
 
-const emit = defineEmits(['update:modelValue'])
-
-const store = useStore()
 const { validarPreco, erros } = useValidacaoForm()
-
-const validarInput = () => validarPreco('preco', input.value)
-
-store.state.form.atendimento.preco ? input.value = store.state.form.atendimento.preco : ''
-emit('update:modelValue', input.value)
+const validarInput = () => validarPreco('preco', event.target.dataset.maskRawValue)
 
 </script>
 
 <template lang="pug">
 
 p
-	label(for="celular") Informe o preço da consulta
+	label(for="celular") Informe o preço da consulta *
 	input(
 		type="text"
 		id="preco"
@@ -29,8 +22,9 @@ p
 		placeholder="Valor"
 		@keyup="validarInput"
 		@blur="validarInput"
-		@input="$emit('update:modelValue', $event.target.value)"
+		@input="$emit('update:modelValue', $event.target.dataset.maskRawValue)"
 		:class="{ '!border-red-400' : erros.preco }"
+		v-maska='["R$ #", "R$ ##", "R$ ###"]'
 		)
 	mensagem-erro(v-if="erros.preco") {{ erros.preco }}
 

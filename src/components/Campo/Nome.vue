@@ -1,20 +1,13 @@
 <script setup>
 
 import { ref } from 'vue'
-import { useStore } from 'vuex'
 import useValidacaoForm from '@/modules/ValidacaoForm'
 
-let input = ref('')
+let input = ref(props.valor)
+const props = defineProps({ valor: String })
 
-const emit = defineEmits(['update:modelValue'])
-
-const store = useStore()
 const { validarNome, erros } = useValidacaoForm()
-
 const validarInput = () => validarNome('nome', input.value)
-
-store.state.form.profissional.nome ? input.value = store.state.form.profissional.nome : ''
-emit('update:modelValue', input.value)
 
 </script>
 

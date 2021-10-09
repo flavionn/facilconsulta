@@ -1,6 +1,6 @@
 <template lang="pug">
 
-div(class="h-screen w-full flex flex-col space-y-8 items-center justify-center text-center text-3xl")
+pagina-container
 	ui-app-titulo Página não encontrada
 
 	router-link(
@@ -9,10 +9,3 @@ div(class="h-screen w-full flex flex-col space-y-8 items-center justify-center t
 		) Voltar para o início
 
 </template>
-
-<route lang="yaml">
-
-meta:
-  layout: 404
-
-</route>

@@ -1,27 +1,20 @@
 <script setup>
 
 import { ref } from 'vue'
-import { useStore } from 'vuex'
 import useValidacaoForm from '@/modules/ValidacaoForm'
 
-let input = ref('')
+let input = ref(props.valor)
+const props = defineProps({ valor: String })
 
-const emit = defineEmits(['update:modelValue'])
-
-const store = useStore()
 const { validarCpf, erros } = useValidacaoForm()
-
-const validarInput = () => validarCpf('cpf', input.value)
-
-store.state.form.profissional.cpf ? input.value = store.state.form.profissional.cpf : ''
-emit('update:modelValue', input.value)
+const validarInput = () => validarCpf('cpf', event.target.dataset.maskRawValue)
 
 </script>
 
 <template lang="pug">
 
 p
-	label(for="cpf") CPF
+	label(for="cpf") CPF *
 	input(
 		type="text"
 		id="cpf"
@@ -29,8 +22,9 @@ p
 		placeholder="Digite um CPF"
 		@keyup="validarInput"
 		@blur="validarInput"
-		@input="$emit('update:modelValue', $event.target.value)"
+		@input="$emit('update:modelValue', $event.target.dataset.maskRawValue)"
 		:class="{ '!border-red-400' : erros.cpf }"
+		v-maska="'###.###.###-##'"
 		)
 	mensagem-erro(v-if="erros.cpf") {{ erros.cpf }}
 

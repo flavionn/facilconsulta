@@ -9,21 +9,16 @@ const nome = store.state.form.profissional.nome
 
 <template lang="pug">
 
-div(class="h-screen w-full flex flex-col space-y-16 items-center text-center justify-center px-12")
+pagina-container(class="space-y-12")
 	ui-app-titulo Seu cadastro esta concluído!
 
-	img(
-		src="https://c.tenor.com/kZyx6uK-ILYAAAAC/house-md-dr-house.gif"
-		class="w-100"
-		)
+	img(src="https://c.tenor.com/kZyx6uK-ILYAAAAC/house-md-dr-house.gif")
 
-	p(class="text-lg") {{ nome }}, que bom que você chegou!<br>Verifique seu e-mail com mais instruções.
+	p {{ nome }}, que bom que você chegou!<br>Verifique seu e-mail com mais instruções.
 
 	ui-botao-link(
 		class="bg-hex-483698 text-white hover:(bg-opacity-90) cursive"
 		to="index"
 		) Voltar para o início
-
-
 
 </template>

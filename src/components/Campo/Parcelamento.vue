@@ -1,15 +1,14 @@
 <script setup>
 
 import { ref } from 'vue'
-import { useStore } from 'vuex'
 import useValidacaoForm from '@/modules/ValidacaoForm'
 
-let input = ref('')
+let input = ref(props.valor)
 let quantidadeMaximaParcelas = ref(3)
 
+const props = defineProps({ valor: [ Number, String ] })
 const emit = defineEmits(['update:modelValue'])
 
-const store = useStore()
 const { validarParcelamento, erros } = useValidacaoForm()
 
 const validarInput = () => {
@@ -17,16 +16,12 @@ const validarInput = () => {
 	validarParcelamento('parcelamento', input.value)
 }
 
-store.state.form.atendimento.parcelamento ? input.value = store.state.form.atendimento.parcelamento : ''
-emit('update:modelValue', input.value)
-
 </script>
 
 <template lang="pug">
 
 p
-	label Parcelamento em
-
+	label Parcelamento em *
 	template(v-for="index in quantidadeMaximaParcelas")
 		span
 			input(
