@@ -1,9 +1,9 @@
-# Desafio Fácil Consulta
+## Desafio Fácil Consulta
 
-## Descrição
-Criar o front de um formulário multi-step para cadastro e tela de visualização resumo do cadastro
+### Descrição
+Desenvolver o front-end de um formulário de cadastro multi-step com validação. Além disso, salvar os dados no state, na medida em que o usuário for avançando. E finalmente a tela de visualização resumo do cadastro e de conclusão do cadastro.
 
-## Uso
+### Uso
 ```bash
 npx degit flavionn/facilconsulta facilconsulta
 cd facilconsulta
@@ -12,7 +12,7 @@ pnpm i # se não tiver o pnpm instalado rode - npm install -g pnpm
 pnpm dev # rode este comando e acesse - http://localhost:3000
 ```
 
-## Stack
+### Stack
 mais no package.json
 - pnpm
 - Vite 2
@@ -21,12 +21,12 @@ mais no package.json
 - Sass
 - Pug
 
-## Tasks
+### Tasks
 - [x] instalar dependências necessárias
 - [x] organizar pastas iniciais projeto
 - [x] markup form
 - [x] validação form
-- [x] funcionamento do formulário
+- [x] funcionamento form
 - [x] salvar dados
 - [x] componentização
 - [x] estilo
