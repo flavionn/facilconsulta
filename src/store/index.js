@@ -2,8 +2,19 @@ import { createStore } from 'vuex'
 
 const state = {
 	form: {
-		profissional: {},
-		atendimento: {}
+		profissional: {
+			// nome: 'Flávio',
+			// cpf: '89089089089',
+			// celular: '89089089089',
+			// estado: 'sc',
+			// cidade: 'Florianópolis'
+		},
+		atendimento: {
+			// especialidade: 'Cardiologia',
+			// preco: '100',
+			// forma: [ 'dinheiro', 'credito' ],
+			// parcelamento: 2
+		}
 	}
 }
 

@@ -64,11 +64,13 @@ form(@submit.prevent="processaForm")
 		campo-estado(
 			v-model="campo.estado"
 			@uf="setarUF"
+			class="w-full"
 			)
 		campo-cidade(
 			v-model="campo.cidade"
 			:estado="uf"
 			:key="uf"
+			class="w-full"
 			)
 	ui-barra-progresso(passo="1")
 	ui-botao-cadastro(
