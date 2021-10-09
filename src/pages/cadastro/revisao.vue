@@ -25,13 +25,13 @@ div(class="space-y-12")
 			revisao-info-campo-container
 			revisao-info-campo-container
 				div
-					revisao-titulo-campo Nome
+					revisao-titulo-campo Nome completo
 					revisao-texto-campo {{ profissional.nome }}
 				div
 					revisao-titulo-campo CPF
 					revisao-texto-campo {{ profissional.cpf }}
 				div
-					revisao-titulo-campo Celular
+					revisao-titulo-campo Número de celular
 					revisao-texto-campo {{ profissional.celular }}
 				div
 					revisao-titulo-campo Estado
@@ -49,13 +49,13 @@ div(class="space-y-12")
 			revisao-subtitulo Atendimento
 			revisao-info-campo-container
 				div
-					revisao-titulo-campo Especialidade
+					revisao-titulo-campo Especialidade principal
 					revisao-texto-campo {{ atendimento.especialidade }}
 				div
-					revisao-titulo-campo Valor consulta
+					revisao-titulo-campo Valor da consulta
 					revisao-texto-campo {{ atendimento.preco }}
 				div
-					revisao-titulo-campo Formas de pagamento
+					revisao-titulo-campo Formas de pagamento da consulta
 					div(v-for="item in atendimento.forma") 
 						revisao-texto-campo {{ item }}
 				div

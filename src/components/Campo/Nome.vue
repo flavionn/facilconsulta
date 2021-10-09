@@ -21,7 +21,7 @@ emit('update:modelValue', input.value)
 <template lang="pug">
 
 p
-	label(for="nome") Nome completo
+	label(for="nome") Nome completo *
 	input(
 		type="text"
 		id="nome"
