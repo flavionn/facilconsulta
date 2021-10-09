@@ -1,7 +1,7 @@
 ## Desafio Fácil Consulta
 
 ### Descrição
-Desenvolver o front-end de um formulário de cadastro multi-step com validação. Além disso, salvar os dados no state, na medida em que o usuário for avançando. E finalmente a tela de visualização resumo do cadastro e de conclusão do cadastro.
+Desenvolver o front-end de um formulário de cadastro multi-step com validação. Além disso, salvar os dados no state na medida em que o usuário for avançando. E finalmente a tela de visualização do resumo do cadastro e de conclusão do cadastro.
 
 ### Uso
 ```bash
