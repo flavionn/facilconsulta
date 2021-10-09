@@ -11,10 +11,10 @@ const subtitulo = computed(() => route.meta.subtitulo)
 
 <template lang="pug">
 
-layout-container(class="px-8 space-y-8 pt-12 pb-16 mx-auto md:(max-w-2xl)")
+layout-container(class="space-y-8 pt-12 pb-20")
 	ui-botao-voltar
-	ui-cadastro-titulo(v-if="titulo") {{ titulo }}
-	ui-cadastro-subtitulo(v-if="subtitulo") {{ subtitulo }}
+	ui-app-titulo(v-if="titulo") {{ titulo }}
+	ui-app-subtitulo(v-if="subtitulo") {{ subtitulo }}
 	router-view
 
 </template>

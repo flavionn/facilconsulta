@@ -10,7 +10,7 @@ const nome = store.state.form.profissional.nome
 <template lang="pug">
 
 div(class="h-screen w-full flex flex-col space-y-16 items-center text-center justify-center px-12")
-	h1(class="text-4xl") Seu cadastro esta concluído!
+	ui-app-titulo Seu cadastro esta concluído!
 
 	img(
 		src="https://c.tenor.com/kZyx6uK-ILYAAAAC/house-md-dr-house.gif"

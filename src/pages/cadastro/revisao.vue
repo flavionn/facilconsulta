@@ -21,22 +21,22 @@ div(class="space-y-12")
 		revisao-icone
 			icone-profissional
 		revisao-info-container
-			revisao-subtitulo Profissional
+			ui-app-subtitulo Profissional
 			revisao-info-campo-container
 			revisao-info-campo-container
-				div
+				template(v-if="profissional.nome")
 					revisao-titulo-campo Nome completo
 					revisao-texto-campo {{ profissional.nome }}
-				div
+				template(v-if="profissional.cpf")
 					revisao-titulo-campo CPF
 					revisao-texto-campo {{ profissional.cpf }}
-				div
+				template(v-if="profissional.celular")
 					revisao-titulo-campo Número de celular
 					revisao-texto-campo {{ profissional.celular }}
-				div
+				template(v-if="profissional.estado")
 					revisao-titulo-campo Estado
 					revisao-texto-campo {{ profissional.estado }}
-				div
+				template(v-if="profissional.cidade")
 					revisao-titulo-campo Cidade
 					revisao-texto-campo {{ profissional.cidade }}
 
@@ -46,19 +46,19 @@ div(class="space-y-12")
 		revisao-icone
 			icone-atendimento
 		revisao-info-container
-			revisao-subtitulo Atendimento
+			ui-app-subtitulo Atendimento
 			revisao-info-campo-container
-				div
+				template(v-if="atendimento.especialidade")
 					revisao-titulo-campo Especialidade principal
 					revisao-texto-campo {{ atendimento.especialidade }}
-				div
+				template(v-if="atendimento.preco")
 					revisao-titulo-campo Valor da consulta
 					revisao-texto-campo {{ atendimento.preco }}
-				div
+				template(v-if="atendimento.forma")
 					revisao-titulo-campo Formas de pagamento da consulta
 					div(v-for="item in atendimento.forma") 
 						revisao-texto-campo {{ item }}
-				div
+				template(v-if="atendimento.parcelamento")
 					revisao-titulo-campo Parcelamento possível
 					revisao-texto-campo Em até {{ atendimento.parcelamento }}x
 

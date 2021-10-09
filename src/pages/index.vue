@@ -1,14 +1,14 @@
 <template lang="pug">
 
-div(class="h-screen w-full flex flex-col space-y-12 items-center justify-center text-center px-12")
+div(class="h-screen w-full flex flex-col space-y-12 items-center justify-center text-center")
 	img(
 		src="https://facilconsulta.com.br/site/assets/img/parceiros-logo.png"
 		class="w-30 opacity-50"
 		)
 
-	h1(class="text-4xl") Desafio Fácil Consulta
+	ui-app-titulo Desafio Fácil Consulta
 
-	p(class="text-lg") Projeto desenvolvido para participar de um desafio da Fácil Consulta para uma vaga de front-end.
+	p(class="text-lg") Projeto de um cadastro multi-step desenvolvido para participar do desafio da Fácil Consulta para uma vaga de front-end.
 
 	div(class="flex space-x-4")
 		ui-botao-link(

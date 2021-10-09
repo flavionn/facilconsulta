@@ -1,11 +1,11 @@
 <template lang="pug">
 
-div(class="h-screen w-full flex flex-col space-y-2 items-center justify-center text-center text-4xl")
-	div Página não encontrada
+div(class="h-screen w-full flex flex-col space-y-8 items-center justify-center text-center text-3xl")
+	ui-app-titulo Página não encontrada
 
 	router-link(
 		to="/"
-		class="border-b border-gray-300 hover:(border-gray-500)"
+		class="border-b border-gray-300 hover:(border-gray-500) text-xl"
 		) Voltar para o início
 
 </template>
