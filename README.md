@@ -33,7 +33,7 @@ pnpm dev
 
 #### Layouts e páginas
 
-Utilizei o `vite-plugin-pages` para criação das rotas com base nos arquivos na pasta [pages](./src/pages). E o `vite-plugin-vue-layouts` para o [layout](.src/layouts) das páginas.
+Utilizei o `vite-plugin-pages` para criação das rotas com base nos arquivos na pasta [pages](./src/pages). E o `vite-plugin-vue-layouts` para o [layout](./src/layouts) das páginas.
 
 #### Gerenciamento de estado
 
@@ -51,13 +51,13 @@ Em algumas situações o componente filho emite um valor para o componente pai, 
 
 No carregamento inicial existe uma função no componente pai para preencher os campos com algum valor inicial (caso exista no store)
 
-Coloquei alguns comentários linha a linha no arquivo em [Form/Profissional.vue](.src/components)
+Coloquei alguns comentários linha a linha no arquivo em [Form/Profissional.vue](./src/components)
 
 #### Validação
 
 A validação ocorre no próprio campo (no keyup, blur ou change) e também quando o usuário envia o formulário.
 
-Criei um [módulo](.src/modules) para validar cada campo especificamente. E um outro módulo com diferentes tipos de verificação de campo. (Ex. se esta vazio, se é número, tamanho, etc)
+Criei um [módulo](./src/modules) para validar cada campo especificamente. E um outro módulo com diferentes tipos de verificação de campo. (Ex. se esta vazio, se é número, tamanho, etc)
 
 #### Proteção das rotas
 
