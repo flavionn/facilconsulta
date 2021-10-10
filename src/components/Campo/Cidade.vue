@@ -4,7 +4,7 @@ import { ref } from 'vue'
 import useValidacaoForm from '@/modules/ValidacaoForm'
 import useLocalizacao from '@/modules/Localizacao'
 
-let input = ref('')
+let input = ref(props.valor)
 let cidades = ref('')
 
 const props = defineProps({ valor: String, estado: String })
@@ -18,12 +18,18 @@ const validarInput = () => {
 	validarCidade('cidade', input.value)
 }
 
-props.estado && props.estado.length ? cidades.value = pesquisaCidades(props.estado) : ''
+if(props.estado && props.estado.length) {
+	input.value = ''
+	cidades.value = pesquisaCidades(props.estado)
+}
 
 if(cidades.value.includes(props.valor)) {
 	input.value = props.valor
 	validarCidade('cidade', input.value)
 }
+
+props.valor === undefined ? input.value = '' : ''
+emit('update:modelValue', input.value)
 
 </script>
 

@@ -1,3 +1,17 @@
+<!-- 
+
+este é o componente do formulário com os campos do profissional
+existe um outro componente com o formulário com os campos do atendimento
+eles contam com componentes filhos que são os campos
+
+no load do componente, ocorre o envio do state para cada campo via prop 'valor'
+a validação ocorre no keyup, blur, change ou input nos campos OU no envio do formulário
+
+para a validação faço uso do modulo 'useValidacaoForm' que valida cada campo específico
+no envio, se tudo estiver ok, salvo os dados no state.form.profissional passando o objeto 'campo'
+e depois mudo a rota para 'cadastro/atendimento'
+-->
+
 <script setup>
 
 import { ref, reactive, onMounted } from 'vue'
@@ -34,10 +48,13 @@ const {
 	} = useValidacaoForm()
 
 /*
-seto o valor da variavel 'uf' quando o usuário altera o estado
-este valor é emitido do componente 'estado'
+seto um valor na variavel 'uf' quando o usuário altera o estado
+este valor é emitido do componente 'estado' e passado como prop para 'cidade'
 */
-const setarUF = (estadoUf) => uf.value = estadoUf
+const setarUF = (estadoUf) => {
+	uf.value = estadoUf
+	estadoUf === '' ? campo.cidade = '' : ''
+}
 
 const validaCampos = () => {
 	validarNome('nome', campo.nome)
@@ -61,18 +78,26 @@ const processaForm = async () => {
 	}
 }
 
-// no mounted esvazio o objeto 'erros'
+const preencherCamposComStore = () => {
+	campo.nome = store.state.form.profissional.nome
+	campo.cpf = store.state.form.profissional.cpf
+	campo.celular = store.state.form.profissional.celular
+	campo.estado = store.state.form.profissional.estado
+	campo.cidade = store.state.form.profissional.cidade
+}
+
+/*
+no mounted esvazio o objeto 'erros' para não ocorrer o risco de pegar 
+os erros do outro form 'atendimento'
+*/
 onMounted(() => {
 	for(let prop in erros) {
 		delete erros[prop]
 	}
 })
 
-campo.nome = store.state.form.profissional.nome
-campo.cpf = store.state.form.profissional.cpf
-campo.celular = store.state.form.profissional.celular
-campo.estado = store.state.form.profissional.estado
-campo.cidade = store.state.form.profissional.cidade
+// chamo a função que preenche os campos deste formulário com o store
+preencherCamposComStore()
 
 </script>
 

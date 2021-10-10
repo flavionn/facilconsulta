@@ -1,9 +1,13 @@
 <script setup>
 
+import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 
+const router = useRouter()
 const store = useStore()
 const nome = store.state.form.profissional.nome
+
+!store.state.form.profissional.tudoOk || !store.state.form.atendimento.tudoOk ? router.push({ name: 'index' }) : ''
 
 </script>
 

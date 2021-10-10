@@ -1,3 +1,15 @@
+<script setup>
+
+import { useRouter } from 'vue-router'
+import { useStore } from 'vuex'
+
+const router = useRouter()
+const store = useStore()
+
+!store.state.form.profissional.tudoOk ? router.push({ name: 'index' }) : ''
+
+</script>
+
 <template lang="pug">
 
 form-atendimento

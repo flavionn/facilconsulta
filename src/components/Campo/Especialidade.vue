@@ -18,6 +18,7 @@ const validarInput = () => {
 	validarEspecialidade('especialidade', input.value)
 }
 
+props.valor === undefined ? input.value = '' : ''
 especialidades.value = listaEspecialidades
 
 </script>

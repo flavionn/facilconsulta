@@ -3,6 +3,7 @@ import { createStore } from 'vuex'
 const state = {
 	form: {
 		profissional: {
+			tudoOk: true,
 			nome: 'Flávio',
 			cpf: '89043111368',
 			celular: '61994584642',
@@ -10,6 +11,7 @@ const state = {
 			cidade: 'Florianópolis'
 		},
 		atendimento: {
+			tudoOk: true,
 			especialidade: 'Cardiologia',
 			preco: '100',
 			forma: [ 'dinheiro', 'credito' ],
@@ -21,9 +23,11 @@ const state = {
 const mutations = {
 	setarDadosProfissional(state, dados) {
 		state.form.profissional = dados
+		state.form.profissional.tudoOk = true
 	},
 	setarDadosAtendimento(state, dados) {
 		state.form.atendimento = dados
+		state.form.atendimento.tudoOk = true
 	}
 }
 

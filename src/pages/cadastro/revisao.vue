@@ -1,13 +1,17 @@
 <script setup>
 
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
+
 import useFormasPagamento from '@/modules/FormasPagamento'
 import useLocalizacao from '@/modules/Localizacao'
 import IconeProfissional from '~icons/iconoir/verified-user'
 import IconeAtendimento from '~icons/iconoir/shopping-bag-add'
 
+const router = useRouter()
 const store = useStore()
+
 const { listaFormasPagamento } = useFormasPagamento()
 const { listaEstados } = useLocalizacao()
 
@@ -34,6 +38,8 @@ const formataNomeEstado = (ufEstado) => {
 	const resultado = listaEstados.find(dado => dado.uf === ufEstado)
 	return resultado.nome
 }
+
+!store.state.form.profissional.tudoOk || !store.state.form.atendimento.tudoOk ? router.push({ name: 'index' }) : ''
 
 </script>
 

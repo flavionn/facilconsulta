@@ -23,6 +23,7 @@ const validarInput = () => {
 	validarEstado('estado', input.value)
 }
 
+props.valor === undefined ? input.value = '' : ''
 estados.value = listaEstados
 emitir()
 
