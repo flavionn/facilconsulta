@@ -61,5 +61,5 @@ Criei um [módulo](./src/modules) para validar cada campo especificamente. E um 
 
 #### Proteção das rotas
 
-A rota 'cadastro-atendimento' só é liberada caso o cadastro profissional esta todo preenchido.
-As rotas 'cadastro-revisao' e 'cadastro-conclusao' só serão liberadas caso os dois cadastros profissional e atendimento estejam preenchidos.
+A rota **cadastro-atendimento** só é liberada caso o cadastro profissional esteja todo preenchido.
+As rotas **cadastro-revisao** e **cadastro-conclusao** serão liberadas caso os dois cadastros (profissional e atendimento) estejam preenchidos.
