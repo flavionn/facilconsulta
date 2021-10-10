@@ -33,11 +33,11 @@ pnpm dev
 
 #### Layouts e páginas
 
-Utilizei o `vite-plugin-pages` para criação das rotas com base nos arquivos na pasta [pages](./src/pages). E o `vite-plugin-vue-layouts` para o [layout](./src/layouts) das páginas.
+Utilizei o [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) para criação das rotas com base nos arquivos na pasta [pages](./src/pages). E o [vite-plugin-vue-layouts](https://github.com/JohnCampionJr/vite-plugin-vue-layouts) para o [layout](./src/layouts) das páginas.
 
 #### Gerenciamento de estado
 
-Utilizei o `vuex` para gerencimento de estado. A estratégia foi criar um state chamado **form** com duas chaves **profissional** e **atendimento**.
+Utilizei o [vuex](https://github.com/vuejs/vuex) para gerencimento de estado. A estratégia foi criar um state chamado **form** com duas chaves **profissional** e **atendimento**.
 
 Na medida em que o usuário avança no preenchimento dos formulários, os dados são salvos neste state.
 
@@ -51,7 +51,7 @@ Em algumas situações o componente filho emite um valor para o componente pai, 
 
 No carregamento inicial existe uma função no componente pai para preencher os campos com algum valor inicial (caso exista no store)
 
-Coloquei alguns comentários linha a linha no arquivo em [Form/Profissional.vue](./src/components)
+Comentei o arquivo em [Form/Profissional.vue](./src/components/Form/Profissional.vue) explicando seu funcionamento.
 
 #### Validação
 
