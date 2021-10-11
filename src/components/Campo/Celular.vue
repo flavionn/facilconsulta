@@ -23,7 +23,7 @@ p
 		@keyup="validarInput"
 		@blur="validarInput"
 		@input="$emit('update:modelValue', $event.target.dataset.maskRawValue)"
-		:class="{ '!border-red-400' : erros.celular }"
+		:class="{ '!border-facilConsulta-danger' : erros.celular }"
 		v-maska="'(##) # ####-####'"
 		)
 	mensagem-erro(v-if="erros.celular") {{ erros.celular }}

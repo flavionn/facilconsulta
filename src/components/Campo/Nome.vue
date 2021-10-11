@@ -23,7 +23,7 @@ p
 		@keyup="validarInput"
 		@blur="validarInput"
 		@input="$emit('update:modelValue', $event.target.value)"
-		:class="{ '!border-red-400' : erros.nome }"
+		:class="{ '!border-facilConsulta-danger' : erros.nome }"
 		)
 	mensagem-erro(v-if="erros.nome") {{ erros.nome }}
 

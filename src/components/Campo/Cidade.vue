@@ -41,7 +41,7 @@ p
 		id="cidade"
 		v-model="input"
 		@change="validarInput"
-		:class="{ '!border-red-400' : erros.cidade }"
+		:class="{ '!border-facilConsulta-danger' : erros.cidade }"
 		)
 		option(value="") Selecione
 		option(

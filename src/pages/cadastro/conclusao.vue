@@ -23,7 +23,7 @@ pagina-container(class="space-y-12")
 	p {{ nome }}, que bom que você chegou!<br>Verifique seu e-mail com mais instruções.
 
 	ui-botao-link(
-		class="bg-hex-483698 text-white hover:(bg-opacity-90) cursive"
+		class="bg-facilConsulta-primary text-facilConsulta-secondary0 hover:(bg-opacity-90) cursive"
 		to="index"
 		) Voltar para o início
 

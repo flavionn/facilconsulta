@@ -37,7 +37,7 @@ p
 		id="estado"
 		v-model="input"
 		@change="validarInput"
-		:class="{ '!border-red-400' : erros.estado }"
+		:class="{ '!border-facilConsulta-danger' : erros.estado }"
 		)
 		option(value="") Selecione
 		option(

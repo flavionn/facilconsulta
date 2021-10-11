@@ -1,6 +1,6 @@
 <template lang="pug">
 
-div(class="text-red-500 text-sm")
+div(class="text-facilConsulta-danger text-sm")
 	slot
 
 </template>

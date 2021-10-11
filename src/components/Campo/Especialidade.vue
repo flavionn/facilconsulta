@@ -31,7 +31,7 @@ p
 		id="especialidade"
 		v-model="input"
 		@change="validarInput"
-		:class="{ '!border-red-400' : erros.especialidade }"
+		:class="{ '!border-facilConsulta-danger' : erros.especialidade }"
 		)
 		option(value="") Selecione a especialidade
 		option(

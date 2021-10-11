@@ -73,12 +73,12 @@ div(class="space-y-12")
 	div(class="space-y-2")
 		ui-botao-cadastro(
 			to="cadastro-conclusao"
-			class="bg-hex-FBDE40 text-hex-483698"
+			class="bg-facilConsulta-cta0 text-facilConsulta-primary"
 			) Cadastrar profissional
 
 		ui-botao-cadastro(
 			to="cadastro-profissional"
-			class="border border-gray-300 text-hex-483698"
+			class="border border-facilConsulta-secondary3 text-facilConsulta-primary"
 			) Editar cadastro
 
 </template>

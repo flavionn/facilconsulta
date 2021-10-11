@@ -20,6 +20,7 @@ layout-container(class="space-y-8 pt-12 pb-32")
 	ui-botao-voltar
 	ui-app-titulo(v-if="titulo") {{ titulo }}
 	ui-app-subtitulo(v-if="subtitulo") {{ subtitulo }}
+	
 	div(class="flex items-start")
 		router-view(class="w-full md:(w-1/2)")
 		img(

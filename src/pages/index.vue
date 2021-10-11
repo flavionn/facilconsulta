@@ -12,12 +12,12 @@ pagina-container
 
 	div(class="flex space-x-4")
 		ui-botao-link(
-			class="bg-hex-483698 text-white hover:(bg-opacity-90) cursive"
+			class="bg-facilConsulta-primary text-facilConsulta-secondary0 hover:(bg-opacity-90) cursive"
 			to="cadastro-profissional"
 			) Ver demo cadastro
 
 		ui-botao-link(
-			class="border-gray-300 hover:(border-gray-400) cursive"
+			class="border-facilConsulta-secondary3 hover:(border-facilConsulta-secondary7) cursive"
 			to="https://www.github.com/flavionn/facilconsulta"
 			) Ver código fonte
 

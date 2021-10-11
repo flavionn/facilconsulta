@@ -10,6 +10,6 @@ h1
 h1
 	@apply text-4xl
 	@apply font-bold
-	@apply text-hex-483698
+	@apply text-facilConsulta-primary
 
 </style>

@@ -1,6 +1,6 @@
 <template lang="pug">
 
-div(class="font-semibold text-hex-483698")
+div(class="font-semibold text-facilConsulta-primary")
 	slot
 
 </template>

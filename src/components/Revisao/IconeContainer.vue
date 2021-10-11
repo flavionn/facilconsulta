@@ -1,6 +1,6 @@
 <template lang="pug">
 
-div(class="text-6xl text-gray-700")
+div(class="text-6xl text-facilConsulta-secondary7")
 	slot
 
 </template>

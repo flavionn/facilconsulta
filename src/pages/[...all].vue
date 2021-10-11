@@ -5,7 +5,7 @@ pagina-container
 
 	router-link(
 		to="/"
-		class="border-b border-gray-300 hover:(border-gray-500) text-xl"
+		class="border-b border-facilConsulta-secondary3 hover:(border-facilConsulta-secondary7) text-xl"
 		) Voltar para o início
 
 </template>

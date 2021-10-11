@@ -138,7 +138,7 @@ form(@submit.prevent="processaForm")
 	//- barra progresso recebe uma prop com o numero do passo
 	ui-barra-progresso(passo="1") 
 	ui-botao-cadastro(
-		class="bg-hex-483698 text-white"
+		class="bg-facilConsulta-primary text-facilConsulta-secondary0"
 		) Próximo
 
 </template>

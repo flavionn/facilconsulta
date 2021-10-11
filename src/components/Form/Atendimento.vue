@@ -5,7 +5,7 @@ import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 import useValidacaoForm from '@/modules/ValidacaoForm'
 
-let creditoIdentificado = ref()
+let creditoIdentificado = ref(false)
 
 let campo = reactive({
 	especialidade: '',
@@ -87,6 +87,6 @@ form(@submit.prevent="processaForm")
 		:valor="campo.parcelamento"
 		)
 	ui-barra-progresso(passo="2")
-	ui-botao-cadastro(class="bg-hex-483698 text-white") Próximo
+	ui-botao-cadastro(class="bg-facilConsulta-primary text-facilConsulta-secondary0") Próximo
 
 </template>
