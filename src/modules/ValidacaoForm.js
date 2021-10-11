@@ -10,6 +10,7 @@ const {
 	checaNumero,
 	checaNumeroMinimo,
 	checaNumeroMaximo,
+	checaCpf,
 	} = useValidacoes()
 
 export default function useValidacaoForm() {
@@ -19,7 +20,7 @@ export default function useValidacaoForm() {
 	}
 
 	const validarCpf = (fieldName, fieldValue) => {
-		erros[fieldName] = !fieldValue ? checaVazio(fieldName, fieldValue) : checaNumero(fieldName, fieldValue) || checaStringMinimo(fieldName, fieldValue, 11) || checaStringMaximo(fieldName, fieldValue, 11)
+		erros[fieldName] = !fieldValue ? checaVazio(fieldName, fieldValue) : checaCpf(fieldName, fieldValue) || checaStringMinimo(fieldName, fieldValue, 11) || checaStringMaximo(fieldName, fieldValue, 11)
 	}
 
 	const validarCelular = (fieldName, fieldValue) => {
@@ -60,6 +61,6 @@ export default function useValidacaoForm() {
 		validarEspecialidade,
 		validarPreco,
 		validarFormaPagamento,
-		validarParcelamento
+		validarParcelamento,
 	}
 }
