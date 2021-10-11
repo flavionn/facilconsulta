@@ -2,8 +2,21 @@ import { createStore } from 'vuex'
 
 const state = {
 	form: {
-		profissional: {},
-		atendimento: {}
+		profissional: {
+			tudoOk: false,
+			nome: '',
+			cpf: '',
+			celular: '',
+			estado: '',
+			cidade: '',
+		},
+		atendimento: {
+			tudoOk: false,
+			especialidade: '',
+			preco: '',
+			forma: [],
+			parcelamento: '',
+		}
 	}
 }
 
