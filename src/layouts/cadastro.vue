@@ -16,7 +16,7 @@ const imagem = computed(() => route.meta.imagem)
 
 <template lang="pug">
 
-layout-container(class="space-y-8 pt-12 pb-32")
+layout-container(class="space-y-8 pt-12 pb-24")
 	ui-botao-voltar
 	ui-app-titulo(v-if="titulo") {{ titulo }}
 	ui-app-subtitulo(v-if="subtitulo") {{ subtitulo }}

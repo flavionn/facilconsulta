@@ -1,6 +1,6 @@
 <script setup>
 
-import { onBeforeMount } from 'vue'
+import { onBeforeMount, onMounted } from 'vue'
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
 
@@ -8,6 +8,7 @@ const store = useStore()
 const router = useRouter()
 
 onBeforeMount(() => !store.state.form.profissional.tudoOk ? router.push({ name: 'index' }) : '')
+onMounted(() => window.scrollTo(0,0))
 
 </script>
 

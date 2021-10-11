@@ -1,6 +1,6 @@
 <script setup>
 
-import { ref, onBeforeMount } from 'vue'
+import { ref, onBeforeMount, onMounted } from 'vue'
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
 import useFormasPagamento from '@/modules/FormasPagamento'
@@ -21,6 +21,7 @@ const profissional = dados.value.profissional
 const atendimento = dados.value.atendimento
 
 onBeforeMount(() => !store.state.form.profissional.tudoOk || !store.state.form.atendimento.tudoOk ? router.push({ name: 'index' }) : '')
+onMounted(() => window.scrollTo(0,0))
 
 </script>
 
