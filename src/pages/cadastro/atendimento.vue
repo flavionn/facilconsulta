@@ -23,6 +23,6 @@ meta:
   layout: cadastro
   titulo: Sobre o atendimento
   subtitulo: Detalhes do atendimento
-  imagem: /src/assets/img/desktop-pagina-2.png
+  imagem: /public/img/desktop-pagina-2.png
 
 </route>

@@ -10,6 +10,6 @@ meta:
   layout: cadastro
   titulo: Sobre o profissional
   subtitulo: Dados do profissional
-  imagem: /src/assets/img/desktop-pagina-1.png
+  imagem: /public/img/desktop-pagina-1.png
 
 </route>

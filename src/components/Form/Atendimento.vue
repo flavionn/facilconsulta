@@ -46,6 +46,13 @@ const processaForm = async () => {
 	}
 }
 
+const preencherCamposComStore = () => {
+	campo.especialidade = store.state.form.atendimento.especialidade
+	campo.preco = store.state.form.atendimento.preco
+	campo.forma = store.state.form.atendimento.forma
+	campo.parcelamento = store.state.form.atendimento.parcelamento
+}
+
 onMounted(() => {
 	if(store.state.form.atendimento.forma) {
 		if(Object.values(store.state.form.atendimento.forma).includes('credito')) {
@@ -54,10 +61,7 @@ onMounted(() => {
 	}
 })
 
-campo.especialidade = store.state.form.atendimento.especialidade
-campo.preco = store.state.form.atendimento.preco
-campo.forma = store.state.form.atendimento.forma
-campo.parcelamento = store.state.form.atendimento.parcelamento
+preencherCamposComStore()
 
 </script>
 

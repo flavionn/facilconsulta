@@ -88,6 +88,6 @@ div(class="space-y-12")
 meta:
   layout: cadastro
   titulo: Revisão do cadastro
-  imagem: /src/assets/img/desktop-pagina-3.png
+  imagem: /public/img/desktop-pagina-3.png
 
 </route>
