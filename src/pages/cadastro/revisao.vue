@@ -1,45 +1,26 @@
 <script setup>
 
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, onBeforeMount } from 'vue'
 import { useStore } from 'vuex'
-
+import { useRouter } from 'vue-router'
 import useFormasPagamento from '@/modules/FormasPagamento'
 import useLocalizacao from '@/modules/Localizacao'
+import useFormataNumeros from '@/modules/FormataNumeros'
 import IconeProfissional from '~icons/iconoir/verified-user'
 import IconeAtendimento from '~icons/iconoir/shopping-bag-add'
 
-const router = useRouter()
 const store = useStore()
+const router = useRouter()
 
-const { listaFormasPagamento } = useFormasPagamento()
-const { listaEstados } = useLocalizacao()
+const { formataFormaPagamento, listaFormasPagamento } = useFormasPagamento()
+const { listaEstados, formataNomeEstado } = useLocalizacao()
+const { formataCelular, formataCpf } = useFormataNumeros()
 
 const dados = ref(store.state.form)
 const profissional = dados.value.profissional
 const atendimento = dados.value.atendimento
 
-const formataCelular = (valor) => {
-	var match = valor.match(/^(\d{2})(\d{1})(\d{4})(\d{4})$/)
-	return '(' + match[1] + ') ' + match[2] + match[3] + '-' + match[4]
-}
-
-const formataCpf = (valor) => {
-	var match = valor.match(/^(\d{3})(\d{3})(\d{3})(\d{2})$/)
-	return match[1] + '.' + match[2] + '.' + match[3] + '-' + match[4]
-}
-
-const formataFormaPagamento = (idForma) => {
-	const resultado = listaFormasPagamento.find(dado => dado.id === idForma)
-	return resultado.label
-}
-
-const formataNomeEstado = (ufEstado) => {
-	const resultado = listaEstados.find(dado => dado.uf === ufEstado)
-	return resultado.nome
-}
-
-!store.state.form.profissional.tudoOk || !store.state.form.atendimento.tudoOk ? router.push({ name: 'index' }) : ''
+onBeforeMount(() => !store.state.form.profissional.tudoOk || !store.state.form.atendimento.tudoOk ? router.push({ name: 'index' }) : '')
 
 </script>
 
@@ -107,5 +88,6 @@ div(class="space-y-12")
 meta:
   layout: cadastro
   titulo: Revisão do cadastro
+  imagem: /src/assets/img/desktop-pagina-3.png
 
 </route>

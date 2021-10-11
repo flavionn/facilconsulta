@@ -1,12 +1,13 @@
 <script setup>
 
-import { useRouter } from 'vue-router'
+import { onBeforeMount } from 'vue'
 import { useStore } from 'vuex'
+import { useRouter } from 'vue-router'
 
-const router = useRouter()
 const store = useStore()
+const router = useRouter()
 
-!store.state.form.profissional.tudoOk ? router.push({ name: 'index' }) : ''
+onBeforeMount(() => !store.state.form.profissional.tudoOk ? router.push({ name: 'index' }) : '')
 
 </script>
 
@@ -22,5 +23,6 @@ meta:
   layout: cadastro
   titulo: Sobre o atendimento
   subtitulo: Detalhes do atendimento
+  imagem: /src/assets/img/desktop-pagina-2.png
 
 </route>

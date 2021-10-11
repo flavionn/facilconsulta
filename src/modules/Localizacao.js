@@ -22,8 +22,14 @@ export default function useLocalizacao() {
 		return resultado.cidades
 	}
 
+	const formataNomeEstado = (ufEstado) => {
+		const resultado = listaEstados.find(dado => dado.uf === ufEstado)
+		return resultado.nome
+	}
+
 	return {
 		listaEstados,
 		pesquisaCidades,
+		formataNomeEstado,
 	}
 }

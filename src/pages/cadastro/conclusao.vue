@@ -1,13 +1,15 @@
 <script setup>
 
-import { useRouter } from 'vue-router'
+import { onBeforeMount } from 'vue'
 import { useStore } from 'vuex'
+import { useRouter } from 'vue-router'
 
-const router = useRouter()
 const store = useStore()
+const router = useRouter()
+
 const nome = store.state.form.profissional.nome
 
-!store.state.form.profissional.tudoOk || !store.state.form.atendimento.tudoOk ? router.push({ name: 'index' }) : ''
+onBeforeMount(() => !store.state.form.profissional.tudoOk || !store.state.form.atendimento.tudoOk ? router.push({ name: 'index' }) : '')
 
 </script>
 
