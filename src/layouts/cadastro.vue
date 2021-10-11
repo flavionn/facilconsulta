@@ -1,11 +1,8 @@
 <script setup>
 
 import { computed } from 'vue'
-import { useStore } from 'vuex'
-import { useRouter, useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 
-const store = useStore()
-const router = useRouter()
 const route = useRoute()
 
 const titulo = computed(() => route.meta.titulo)
