@@ -37,7 +37,7 @@ Utilizei o [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) pa
 
 #### Gerenciamento de estado
 
-Utilizei o [vuex](https://github.com/vuejs/vuex) para gerencimento de estado. A estratégia foi criar um state chamado **form** com duas chaves **profissional** e **atendimento**.
+Utilizei o [vuex](https://github.com/vuejs/vuex) para gerencimento de estado. A estratégia foi criar um state chamado **form** com duas propriedades **profissional** e **atendimento**.
 
 Na medida em que o usuário avança no preenchimento dos formulários, os dados são salvos neste state.
 
