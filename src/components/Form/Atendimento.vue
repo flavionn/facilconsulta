@@ -34,7 +34,7 @@ const validaCampos = () => {
 	validarEspecialidade('especialidade', campo.especialidade)
 	validarPreco('preco', campo.preco)
 	validarFormaPagamento('forma', campo.forma)
-	creditoIdentificado.value ?	validarParcelamento('parcelamento', campo.parcelamento) : campo.parcelamento = ''
+	creditoIdentificado.value ?	validarParcelamento('parcelamento', campo.parcelamento) : erros.parcelamento = ''
 }
 
 const processaForm = async () => {
